@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "bootstrap5/form.html" import render_form %}
+
+
+{% block body %}
+
+<section class="py-5 text-center container">
+<div align="left ">
+   {{ render_form(form) }}
+</div>
+</section>
+
+{% if is_edit: %}
+
+<button formaction="url_for('delete')">Delete Post</button>
+
+<div align="center">
+        <p>
+          <a href="{{ url_for('show_project') }}" class="btn btn-primary my-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Upload New Project</font></font></a>
+        </p>
+</div>
+
+
+{% endif %}
+
+
+
+{% endblock  %}
+

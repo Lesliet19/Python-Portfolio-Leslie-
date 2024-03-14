@@ -1,0 +1,13 @@
+Website to display all my python projects
+
+i want to be able to upload my projects from the website not from the pyhton code and html and all that
+
+- Create Database to store project details : Project name, Description, Pictures Etc.
+-  Create Flask Form to get The project details
+
+only want admin to be able to add, delete and edit Porject uploads
+- i can either do log in and authentication
+or
+- can just create a 'secret' app route which gives me access to those abilities
+   - this way it's not as secure but it does save time, and then later on i can add those features if i want.
+

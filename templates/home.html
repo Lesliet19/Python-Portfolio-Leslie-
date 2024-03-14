@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<main>
+
+  <section class="py-5 text-center container fw-light">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leslie Tavakoli</font></font></h1>
+        <br>
+        <h4 class="fw-light">
+          Newly skilled and motivated Python Developer with knowledge in a wide range of technologies, frameworks, and tools.
+        </h4>
+        <br>
+        <h4 class="fw-light">
+          Passionate about continuous learning, always looking to improve Technical Skills and knowledge.
+        </h4>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="container fw-light">
+    <h2 class="fw-light col-md-6" >Skills</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Content for the first div -->
+            <div class="bg-secondary text-white p-3">
+                <p>
+                  <li>Programming Languages: Python 3</li>
+                  <li>Development Environments: PyCharm, Vs Code, Google Colab</li>
+                  <li>Scripting and Automation: Python Scripting, Automation</li>
+
+                  <li>Web Scraping: Beautiful Soup, Selenium Web Driver, Requests</li>
+                  <li>Web Forms: WTForms</li>
+                  <li>Front-End Development: HTML 5, CSS 3, Bootstrap 4</li>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Content for the second div -->
+            <div class="bg-secondary text-white p-3">
+                <p>
+                  <li>Data Science: Libraries: Pandas, Matplotlib, Plotly, Turtle</li>
+                  <li>Desktop App Development: Python GUI: Tkinter</li>
+                  <li>Backend Web Development:</li>
+
+                  <li>Flask RESTful APIs</li>
+                  <li>Databases: SQL Authentication Web Design</li>
+                  <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+  <div class="album py-5 bg-body-tertiary">
+    <h2 class="fw-light" align="center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit; ">My Projects</font></font></h2>
+
+  <div class="container py-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    {% for post in all_posts %}
+      <div class="col">
+        <div class="card shadow-sm h-100 d-flex flex-column">
+          <img src="{{ post.img_url }}" class="card-img-top" alt="{{ post.title }}">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title">{{ post.title }}</h4>
+            <p class="card-text">{{ post.subtitle }}</p>
+            <div class="mt-auto">
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary my-2">
+                  <a href="{{ url_for('show_post', post_id=post.id) }}" style="color: white; text-decoration:none">Check It Out</a>
+                </button>
+              </div>
+              <small class="text-body-secondary">GitHub link: Coming soon</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+  </div>
+<div class="row py-lg-5">
+</div>
+
+
+</main>
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p>More projects coming soon!</p>
+
+    <p class="float-end mb-1">
+      <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Back to top</font></font></a>
+    </p>
+  </div>
+</footer>
+{% endblock %}
