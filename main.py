@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Integer, String, Text, Column, text
 
 # Create applications to run
-app = Flask('__main__')
+app = Flask(__name__)
 Bootstrap4(app)
 ckeditor = CKEditor(app)
 
